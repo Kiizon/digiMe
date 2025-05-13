@@ -1,70 +1,77 @@
     /* Reset and body styling */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Press Start 2P', sans-serif; background: #222; color: #fff; }
+    body { 
+      font-family: 'Press Start 2P', sans-serif; 
+      background: #222; 
+      color: #fff; 
+    }
 
-    /* Container for the floating tabs (like a browser tab bar) */
     .window {
-      width: 800px
+      width: 800px;
       height: 600px;
-      border:2px solid #000;
-      background: #8B4513; /* brown for dirt */
-      position: relative;
-      position: relative
+      border: 2px solid #000;
+      background: #777;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s ease;
+      user-select: none;
     }
     .title-bar {
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
+      align-items: center;
+      background: #4A7023;
+      padding: 8px;
+      border-bottom: 2px solid #000;
+      cursor: move;
     }
     nav {
-      display:flex
-      justify-content: space-between;
-      top: 20px;
-      left: 50%;
       display: flex;
-      border: 4px solid #000;
-      border-bottom: none;
-      border-radius: 8px 8px 0 0;
-      overflow: hidden;
-      background: #4A7023; /* fallback grass-green */
-      /* Optional: tile actual grass-side texture */
-      /* background: url('grass_block_side.png') repeat-x; */
-      image-rendering: pixelated;
+      gap: 20px;
+      flex: 1;
+    }
+    .close-button {
+      background: #ff4444;
+      border: 2px solid #000;
+      color: #fff;
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Press Start 2P', sans-serif;
+    }
+    .close-button:hover {
+      background: #ff6666;
     }
 
-    /* Individual tabs */
     .tab {
-      padding: 12px 24px;
+      padding: 8px 16px;
       cursor: pointer;
       text-align: center;
-      border-right: 2px solid #000;
+      background: #67912A;
+      border: 2px solid #000;
+      border-bottom: none;
+      border-radius: 8px 8px 0 0;
       user-select: none;
-      transition: background .2s;
+      transition: background 0.2s;
+      font-size: 0.8em;
     }
     .tab:last-child { border-right: none; }
     .tab.active {
-      background: #8FBC8F; /* highlight active tab */
+      background: #8FBC8F;
       color: #000;
     }
     .tab:hover { background: #67912A; }
 
-    /* Content panels under the tab bar */
     .content {
-      position: fixed;
-      top: 80px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80%;
-      max-width: 600px;
-      padding: 16px;
-      background: #C2B280; /* dirt-like background */
-      border: 4px solid #000;
-      border-radius: 0 8px 8px 8px;
       display: none;
-      image-rendering: pixelated;
-      line-height: 1.4;
+      line-height: 1.6;
     }
     .content.active { display: block; }
 
-    /* Headings inside content */
-    .content h1 { margin-bottom: 12px; font-size: 1.2em; }===
+    .content h1 { margin-bottom: 12px; font-size: 1.2em; }
