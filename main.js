@@ -23,3 +23,18 @@ function toggleIcons() {
         moonIcon.style.display = 'block';
     }
 }
+
+function toggleToNightMode  () {
+    document.body.style.setProperty('--primary-color', '#0e0d26');
+}
+
+function toggleToDayMode() {
+    document.body.style.setProperty('--primary-color', '#f5e9b8');
+}
+if (sunIcon && moonIcon) {
+    sunIcon.addEventListener('click', toggleIcons);
+    sunIcon.addEventListener('click', toggleToNightMode);
+    moonIcon.addEventListener('click', toggleIcons);
+    moonIcon.addEventListener('click', toggleToDayMode);
+    
+}
