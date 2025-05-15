@@ -2,15 +2,19 @@ const tabs = document.querySelectorAll('.tab');
 const panels = document.querySelectorAll('.content');
 const sunIcon = document.querySelector('.theme-icon.sun');
 const moonIcon = document.querySelector('.theme-icon.moon');
+const navSfx = document.getElementById('nav-sfx');
 
 
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
-      document.querySelector('.tab.active').classList.remove('active');
-      tab.classList.add('active');
+    navSfx.currentTime = 0;
+    navSfx.play();
+    navSfx.volume = 0.2;
+    document.querySelector('.tab.active').classList.remove('active');
+    tab.classList.add('active');
 
-      document.querySelector('.content.active').classList.remove('active');
-      document.getElementById(tab.dataset.target).classList.add('active');
+    document.querySelector('.content.active').classList.remove('active');
+    document.getElementById(tab.dataset.target).classList.add('active');
   });
 });
 
