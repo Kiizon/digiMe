@@ -137,7 +137,7 @@
     }
 
     .floor {
-        background-image: url('/assets/imgs/grass_block_side.png');
+        background-image: url('assets/imgs/grass_block_side.png');
         background-repeat: repeat-x;
         height: 64px;
         width: 100%;
