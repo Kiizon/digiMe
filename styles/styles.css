@@ -137,7 +137,7 @@
     }
 
     .floor {
-        background-image: url('/digiMe/assets/imgs/grass_block_side.png');
+        background-image: url('https://kiizon.github.io/digiMe/assets/imgs/grass_block_side.png');
         background-repeat: repeat-x;
         height: 64px;
         width: 100%;
