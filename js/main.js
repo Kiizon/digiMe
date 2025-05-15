@@ -48,3 +48,47 @@ if (sunIcon && moonIcon) {
     sunIcon.addEventListener('click', toggleIcons);
     moonIcon.addEventListener('click', toggleIcons);
 }
+
+const win       = document.querySelector('.window');
+const handle    = win.querySelector('.title-bar');
+let   isDragging = false;
+let   startX, startY;      // mouse position at drag start
+let   origX, origY;        // window’s left/top at drag start
+
+handle.addEventListener('mousedown', (e) => {
+  e.preventDefault();      // avoid accidental text or icon selection
+
+  // record where we clicked vs. the window’s current position
+  const rect = win.getBoundingClientRect();
+  startX = e.clientX;
+  startY = e.clientY;
+  origX  = rect.left;
+  origY  = rect.top;
+
+  // remove the centering transform so left/top take full effect
+  win.style.transform = 'none';
+  win.classList.add('dragging');
+
+  isDragging = true;
+  document.addEventListener('mousemove', onMouseMove);
+  document.addEventListener('mouseup',   onMouseUp);
+});
+
+function onMouseMove(e) {
+  if (!isDragging) return;
+
+  // calculate how far the mouse has moved
+  const dx = e.clientX - startX;
+  const dy = e.clientY - startY;
+
+  // move the window by that delta
+  win.style.left = `${origX + dx}px`;
+  win.style.top  = `${origY + dy}px`;
+}
+
+function onMouseUp() {
+  isDragging = false;
+  win.classList.remove('dragging');
+  document.removeEventListener('mousemove', onMouseMove);
+  document.removeEventListener('mouseup',   onMouseUp);
+}
