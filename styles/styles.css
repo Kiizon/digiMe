@@ -1,8 +1,13 @@
     /* Reset and body styling */
+    :root {
+        --primary-color: #0e0d26;
+        --secondary-color: #f5e9b8;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { 
       font-family: 'Press Start 2P', sans-serif; 
-      background: #222; 
+      background: var(--primary-color);
+      transition: background 0.5s ease;
       color: #fff; 
     }
 
@@ -68,13 +73,69 @@
     }
     .tab:hover { background: #67912A; }
 
-    .content {
-      display: none;
-      line-height: 1.6;
+    .window-content {
+        height: calc(100% - 50px);
+        background: var(--secondary-color);
+        padding: 16px;
+        overflow-y: auto;
     }
-    .content.active { display: block; }
 
-    .content h1 { margin-bottom: 12px; font-size: 1.2em; }
+    .content {
+        display: none;
+        line-height: 1.6;
+        max-height: 100%;
+        overflow-y: auto;
+    }
+
+    .content.active {
+        display: block;
+    }
+
+    /* Content styling */
+    .content h1 {
+        margin-bottom: 16px;
+        font-size: 1.2em;
+        color: #000;
+    }
+
+    .content p, .content li {
+        margin-bottom: 12px;
+        font-size: 12px;
+        color: #333;
+    }
+
+    .content ul {
+        list-style-position: inside;
+        margin-left: 16px;
+    }
+
+    .content a {
+        color: #4A7023;
+        text-decoration: none;
+    }
+
+    .content a:hover {
+        text-decoration: underline;
+    }
+
+    .social-links {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .social-links a {
+        color: #4A7023;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    .social-links a:hover {
+        text-decoration: underline;
+    }
+
     .floor {
         background-image: url('/assets/imgs/grass_block_side.png');
         background-repeat: repeat-x;
@@ -84,4 +145,61 @@
         bottom: 0;
         left: 0;
         image-rendering: pixelated;
+    }
+
+    .theme-icons {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        gap: 15px;
+        z-index: 1000;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .theme-icon {
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 5px;
+        border-radius: 50%;
+    }
+
+    .theme-icon:hover {
+        transform: scale(1.1);
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .theme-icon.sun {
+        display: none;
+    }
+
+    .theme-icon.moon {
+        display: block;
+    }
+
+    body.day-mode {
+        background: #87CEEB;
+    }
+
+    body.night-mode {
+        background: #222;
+    }
+
+    body.day-mode .theme-icon.sun {
+        display: block;
+    }
+
+    body.day-mode .theme-icon.moon {
+        display: none;
+    }
+
+    body.night-mode .theme-icon.sun {
+        display: none;
+    }
+
+    body.night-mode .theme-icon.moon {
+        display: block;
     }

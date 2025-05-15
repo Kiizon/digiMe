@@ -9,43 +9,102 @@
   <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
+    <div class="theme-icons">
+        <img src="/assets/imgs/sun.png" alt="sun" class="theme-icon sun">
+        <img src="/assets/imgs/moon.png" alt="moon" class="theme-icon moon">
+    </div>
     <div class="window">
         <div class="title-bar">
             <nav>
-                <div class="tab active" data-target="about">About Me</div>
-                <div class="tab" data-target="projects">Projects</div>
-                <div class="tab" data-target="message">Leave Message</div>
-                <div class="tab" data-target="connect">Connect</div>
+                <div class="tab active" data-target="home">home</div>
+                <div class="tab" data-target="about me">about me</div>
+                <div class="tab" data-target="projects">projects</div>
+                <div class="tab" data-target="fun">fun</div>
             </nav>
             <button class="close-button">X</button>
         </div>
         <div class="window-content">
-            <div class="content active" id="about">
-                <h1>About Me</h1>
+            <div class="content active" id="home">
+                <h1>welcome to my piece of the internet</h1>
                 <p>
                     Hi! I'm Kish, a Computer Science student.
                     When I'm not malding at my computer, I'm usually blasting music, watching anime or playing video games... or all of them at once lol
                 </p>
-                <a href="https://www.linkedin.com/in/kishdizon/">LinkedIn</a>
-                <a href="https://github.com/Kiizon">GitHub</a>
-                <a href="mailto:kishdizon@gmail.com">Email</a>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/kishdizon/">LinkedIn</a>
+                    <a href="https://github.com/Kiizon">GitHub</a>
+                    <a href="mailto:kishdizon@gmail.com">Email</a>
+                </div>
+            </div>
+
+            <div class="content" id="about me">
+                <p>
+                    i like to explore new ideas and often find myself being bombarded by all the cool concepts i want to learn.
+                </p>
+                <p>
+                    i typically a go with the flow person, but no matter what, i always give it my all.
+                </p>
+                <p>
+                    i spend most of my time replicating simpler versions of things i find interesting.
+                </p>
+                <p>
+                    <b>currently</b>
+                </p>
+                <p>
+                    i'm a 2nd year computer science student at toronto metropolitan university. studying computer science.
+                </p>
+                <p>
+                    dipping my toes into ml and ai
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/kishdizon/">LinkedIn</a>
+                    <a href="https://github.com/Kiizon">GitHub</a>
+                    <a href="mailto:kishdizon@gmail.com">Email</a>
+                </div>
             </div>
             <div class="content" id="projects">
-                <h1>Projects</h1>
+                <h1>things i've made/ am working on</h1>
                 <ul>
-                    <li>Project A</li>
-                    <li>Project B</li>
-                    <li>Project C</li>
+                    <li>
+                        <a href="https://github.com/Kiizon/BrokeBites"><u>BrokeBites</u></a>
+                    </li>
+                    <p>A web app that curates recipes based on local sale ingredients.</p>
+                    <li>
+                        <a href="https://github.com/Kiizon/BrokeBites"><u>Cypress</u></a>
+                    </li>
+                    <p>An interactive, map-based platform for Toronto residents to report, categorize, and track city street issues in real time—while preventing duplicates and false reports.</p>
+                    <li>
+                        <a href="https://github.com/Kiizon/DynoNEAT"><u>DynoNEAT</u></a>
+                        <p> NEAT-powered AI that evolves to play the Chrome Dino game by learning when to jump and dodge obstacles.  </p>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Kiizon/chrome-dino"><u>chrome-dino</u></a>
+                        <p>A clone of the Chrome Dino game.</p>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Kiizon/flippscrape"><u>flippscrape</u></a>
+                        <p>A web scraper for Flipp allowing users to parse weekly sale flyers from local grocery stores into a csv file.</p>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Kiizon/polarities-puzzle"><u>polarities-puzzle</u></a>
+                        <p> A backtracking algorithm that solves the magnet polarity puzzle implemented in Elixir and Rust.</p>
+                    </li>
                 </ul>
-            </div>
-            <div class="content" id="message">
-                <h1>Leave Message</h1>
-                <p>Contact me or drop feedback here!</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/kishdizon/">LinkedIn</a>
+                    <a href="https://github.com/Kiizon">GitHub</a>
+                    <a href="mailto:kishdizon@gmail.com">Email</a>
+                </div>
             </div>
         
-            <div class="content" id="connect">
-                <h1>Connect</h1>
-                <p>Find me on LinkedIn and GitHub!</p>
+            <div class="content" id="fun">
+                <h1>wip... working on something fun!</h1>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/kishdizon/">LinkedIn</a>
+                    <a href="https://github.com/Kiizon">GitHub</a>
+                    <a href="mailto:kishdizon@gmail.com">Email</a>
+                </div>
+            </div>
             </div>
         </div>
     </div>
