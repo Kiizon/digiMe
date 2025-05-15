@@ -5,71 +5,71 @@
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { 
-      font-family: 'Press Start 2P', sans-serif; 
-      background: var(--primary-color);
-      transition: background 0.5s ease;
-      color: #fff; 
+        font-family: 'Press Start 2P', sans-serif; 
+        background: var(--primary-color);
+        transition: background 0.5s ease;
+        color: #fff; 
     }
 
     .window {
-      width: 800px;
-      height: 600px;
-      border: 2px solid #000;
-      background: #777;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: transform 0.1s ease;
-      user-select: none;
+        width: 60vw; /* 60% of viewport width */
+        height: 60vh; /* 60% of viewport height */
+        border: 2px solid #000;
+        background: #777;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s ease;
+    user-select: none;
     }
     .title-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #4A7023;
-      padding: 8px;
-      border-bottom: 2px solid #000;
-      cursor: move;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #4A7023;
+        padding: 8px;
+        border-bottom: 2px solid #000;
+        cursor: move;
     }
     nav {
-      display: flex;
-      gap: 20px;
-      flex: 1;
+        display: flex;
+        gap: 20px;
+        flex: 1;
     }
     .close-button {
-      background: #ff4444;
-      border: 2px solid #000;
-      color: #fff;
-      width: 24px;
-      height: 24px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-family: 'Press Start 2P', sans-serif;
+        background: #ff4444;
+        border: 2px solid #000;
+        color: #fff;
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: 'Press Start 2P', sans-serif;
     }
     .close-button:hover {
-      background: #ff6666;
+        background: #ff6666;
     }
 
     .tab {
-      padding: 8px 16px;
-      cursor: pointer;
-      text-align: center;
-      background: #67912A;
-      border: 2px solid #000;
-      border-bottom: none;
-      border-radius: 8px 8px 0 0;
-      user-select: none;
-      transition: background 0.2s;
-      font-size: 0.8em;
+        padding: 8px 16px;
+        cursor: pointer;
+        text-align: center;
+        background: #67912A;
+        border: 2px solid #000;
+        border-bottom: none;
+        border-radius: 8px 8px 0 0;
+        user-select: none;
+        transition: background 0.2s;
+        font-size: 0.8em;
     }
     .tab:last-child { border-right: none; }
     .tab.active {
-      background: #8FBC8F;
-      color: #000;
+        background: #8FBC8F;
+        color: #000;
     }
     .tab:hover { background: #67912A; }
 
@@ -137,7 +137,7 @@
     }
 
     .floor {
-        background-image: url('assets/imgs/grass_block_side.png');
+        background-image: url('/assets/imgs/grass_block_side.png');
         background-repeat: repeat-x;
         height: 64px;
         width: 100%;
