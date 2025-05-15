@@ -19,26 +19,32 @@ tabs.forEach(tab => {
 });
 
 function toggleIcons() {
-    if (sunIcon.style.display === 'none') {
-        sunIcon.style.display = 'block';
-        moonIcon.style.display = 'none';
+    navSfx.currentTime = 0;
+    navSfx.volume = 0.2;
+    navSfx.play();
+  
+    const moonIsHidden = getComputedStyle(moonIcon).display === 'none';
+    if (moonIsHidden) {
+        toggleToDayMode();
     } else {
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'block';
+        toggleToNightMode();
     }
 }
+  
 
-function toggleToNightMode  () {
+function toggleToNightMode() {
     document.body.style.setProperty('--primary-color', '#0e0d26');
+    moonIcon.style.display = 'none';
+    sunIcon.style.display = 'block';
 }
 
 function toggleToDayMode() {
     document.body.style.setProperty('--primary-color', '#f5e9b8');
+    moonIcon.style.display = 'block';
+    sunIcon.style.display = 'none';
 }
+
 if (sunIcon && moonIcon) {
     sunIcon.addEventListener('click', toggleIcons);
-    sunIcon.addEventListener('click', toggleToNightMode);
     moonIcon.addEventListener('click', toggleIcons);
-    moonIcon.addEventListener('click', toggleToDayMode);
-    
 }
