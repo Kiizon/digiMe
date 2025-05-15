@@ -286,7 +286,7 @@
     /* Landscape mode adjustments */
     @media screen and (max-height: 500px) and (orientation: landscape) {
         .window {
-            height: 95vh;
+            height: 80vh;
         }
 
         .title-bar {
