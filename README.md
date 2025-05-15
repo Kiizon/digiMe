@@ -1,5 +1,5 @@
 # digiMe
-my personal site
+A personal website built with vanilla HTML, CSS, and JavaScript -- for simplicity :D
 
 future plans:
 - fix toggle states
