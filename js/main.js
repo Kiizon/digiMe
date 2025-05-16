@@ -69,8 +69,9 @@ if (!isTouchDevice) {
         origX = rect.left;
         origY = rect.top;
 
-        // remove the centering transform so left/top take full effect
-        win.style.transform = 'none';
+        // Keep the transform but adjust the position
+        win.style.left = '50%';
+        win.style.top = '50%';
         win.classList.add('dragging');
 
         isDragging = true;
@@ -86,9 +87,13 @@ function onMouseMove(e) {
     const dx = e.clientX - startX;
     const dy = e.clientY - startY;
 
+    // Calculate the new position while maintaining the transform
+    const newX = 50 + (dx / window.innerWidth * 100);
+    const newY = 50 + (dy / window.innerHeight * 100);
+
     // move the window by that delta
-    win.style.left = `${origX + dx}px`;
-    win.style.top = `${origY + dy}px`;
+    win.style.left = `${newX}%`;
+    win.style.top = `${newY}%`;
 }
 
 function onMouseUp() {
