@@ -52,8 +52,7 @@ if (sunIcon && moonIcon) {
 const win       = document.querySelector('.window');
 const handle    = win.querySelector('.title-bar');
 let   isDragging = false;
-let   startX, startY;
-let   origX, origY;        
+let   offsetX, offsetY;        
 
 
 const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0; 
@@ -62,16 +61,14 @@ if (!isTouchDevice) {
     handle.addEventListener('mousedown', (e) => {
         e.preventDefault();
 
-        // record where we clicked vs. the window's current position
         const rect = win.getBoundingClientRect();
-        startX = e.clientX;
-        startY = e.clientY;
-        origX = rect.left;
-        origY = rect.top;
+        offsetX = e.clientX - rect.left;
+        offsetY = e.clientY - rect.top;
 
-        // Keep the transform but adjust the position
-        win.style.left = '50%';
-        win.style.top = '50%';
+        // Switch to pixel-based positioning so clicks don't recenter
+        win.style.transform = 'none';
+        win.style.left = `${rect.left}px`;
+        win.style.top = `${rect.top}px`;
         win.classList.add('dragging');
 
         isDragging = true;
@@ -83,17 +80,11 @@ if (!isTouchDevice) {
 function onMouseMove(e) {
     if (!isDragging) return;
 
-    // calculate how far the mouse has moved
-    const dx = e.clientX - startX;
-    const dy = e.clientY - startY;
+    const newLeft = e.clientX - offsetX;
+    const newTop = e.clientY - offsetY;
 
-    // Calculate the new position while maintaining the transform
-    const newX = 50 + (dx / window.innerWidth * 100);
-    const newY = 50 + (dy / window.innerHeight * 100);
-
-    // move the window by that delta
-    win.style.left = `${newX}%`;
-    win.style.top = `${newY}%`;
+    win.style.left = `${newLeft}px`;
+    win.style.top = `${newTop}px`;
 }
 
 function onMouseUp() {
