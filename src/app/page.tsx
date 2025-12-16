@@ -1,4 +1,5 @@
 import ProjectCarousel from "@/components/ProjectCarousel";
+import { Mail, Github, Linkedin } from "lucide-react";
 
 import React from "react";
 
@@ -89,9 +90,9 @@ export default function Home() {
       {/* Footer */}
       <footer className="footer">
         <div className="socials">
-          <a href="mailto:kishdizon@gmail.com">Email</a>
-          <a href="https://github.com/Kiizon" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/kishdizon/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:kishdizon@gmail.com" aria-label="Email"><Mail size={18} /></a>
+          <a href="https://github.com/Kiizon" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github size={18} /></a>
+          <a href="https://www.linkedin.com/in/kishdizon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
         </div>
         <div style={{ color: "var(--muted)", fontSize: "0.8rem", cursor: "default" }}>
           EN
