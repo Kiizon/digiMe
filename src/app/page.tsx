@@ -1,0 +1,98 @@
+import ProjectCarousel from "@/components/ProjectCarousel";
+
+import React from "react";
+
+// Components for the clean layout
+const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
+  <div className="section">
+    <h3 className="section-title">{title}</h3>
+    {children}
+  </div>
+);
+
+const RoleItem = ({
+  title,
+  subtitle,
+  href,
+  logo
+}: {
+  title: string;
+  subtitle: string;
+  href?: string;
+  logo?: string;
+}) => (
+  <div className="item">
+    {logo ? (
+      <img src={logo} alt={title} className="role-icon" />
+    ) : (
+      <div className="icon-placeholder" />
+    )}
+    <div className="item-content">
+      {href ? (
+        <a href={href} target="_blank" rel="noopener noreferrer" className="item-title">{title}</a>
+      ) : (
+        <span className="item-title">{title}</span>
+      )}
+      <span className="item-subtitle">{subtitle}</span>
+    </div>
+  </div>
+);
+
+
+
+export default function Home() {
+  return (
+    <main className="container">
+      {/* Intro */}
+      <header>
+        <h1 style={{ fontSize: "1.5rem", fontWeight: 500, marginBottom: "0.5rem" }}>
+          hi im kish
+        </h1>
+        <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: "1.5" }}>
+          computer science student exploring ml, ai, and building things for the web.
+          always trying to learn something new.
+        </p>
+      </header>
+
+      {/* Currently */}
+      <Section title="Currently">
+        <div className="item-list">
+          <RoleItem
+            title="Computer Science"
+            subtitle="Toronto Metropolitan University"
+            href="https://www.torontomu.ca/"
+            logo="/tmu-logo.jpg"
+          />
+        </div>
+      </Section>
+
+      {/* Previously */}
+      <Section title="Previously">
+        <div className="item-list">
+          <RoleItem
+            title="Software Developer Intern"
+            subtitle="Morphace"
+            logo="/morphace-logo.jpg"
+          />
+        </div>
+      </Section>
+
+      {/* Projects */}
+      <Section title="Projects">
+        <ProjectCarousel />
+      </Section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <div className="socials">
+          <a href="mailto:kishdizon@gmail.com">Email</a>
+          <a href="https://github.com/Kiizon" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/kishdizon/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <div style={{ color: "var(--muted)", fontSize: "0.8rem", cursor: "default" }}>
+          EN
+        </div>
+      </footer>
+    </main>
+  );
+}
