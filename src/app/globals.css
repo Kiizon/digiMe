@@ -56,6 +56,26 @@ ul {
   gap: 3rem;
 }
 
+.intro-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+  /* Slightly rounded corners */
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 .section {
   display: flex;
   flex-direction: column;

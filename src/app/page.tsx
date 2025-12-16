@@ -44,14 +44,18 @@ export default function Home() {
   return (
     <main className="container">
       {/* Intro */}
-      <header>
-        <h1 style={{ fontSize: "1.5rem", fontWeight: 500, marginBottom: "0.5rem" }}>
-          hi im kish
-        </h1>
-        <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: "1.5" }}>
-          computer science student exploring ml, ai, and building things for the web.
-          always trying to learn something new.
-        </p>
+      {/* Intro */}
+      <header className="intro-header">
+        <div className="intro-text">
+          <h1 style={{ fontSize: "1.5rem", fontWeight: 500, marginBottom: "0.5rem" }}>
+            hi im kish
+          </h1>
+          <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: "1.5" }}>
+            computer science student exploring ml, ai, and building things for the web.
+            always trying to learn something new.
+          </p>
+        </div>
+        <img src="/me-logo.png" alt="Kish Dizon" className="profile-pic" />
       </header>
 
       {/* Currently */}
