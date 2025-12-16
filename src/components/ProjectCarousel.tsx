@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 type Project = {
     title: string;
@@ -25,14 +25,21 @@ const ITEMS_PER_PAGE = 4;
 
 export default function ProjectCarousel() {
     const [startIndex, setStartIndex] = useState(0);
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+
+    useEffect(() => {
+        audioRef.current = new Audio("/assets/sfx/dropSfx.mp3");
+    }, []);
 
     const next = () => {
+        audioRef.current?.play();
         setStartIndex((prev) =>
             Math.min(prev + ITEMS_PER_PAGE, PROJECTS.length - ITEMS_PER_PAGE < 0 ? 0 : PROJECTS.length - ITEMS_PER_PAGE)
         );
     };
 
     const prev = () => {
+        audioRef.current?.play();
         setStartIndex((prev) => Math.max(prev - ITEMS_PER_PAGE, 0));
     };
 
