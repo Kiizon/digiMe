@@ -1,4 +1,5 @@
 import ProjectCarousel from "@/components/ProjectCarousel";
+import ThemeToggle from "@/components/ThemeToggle";
 import { Mail, Github, Linkedin } from "lucide-react";
 
 import React from "react";
@@ -56,7 +57,7 @@ export default function Home() {
             always trying to learn something new.
           </p>
         </div>
-        <img src="/me-logo.png" alt="Kish Dizon" className="profile-pic" />
+        <ThemeToggle />
       </header>
 
       {/* Currently */}
