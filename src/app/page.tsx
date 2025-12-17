@@ -53,8 +53,7 @@ export default function Home() {
             hi im kish
           </h1>
           <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: "1.5" }}>
-            computer science student exploring ml, ai, and building things for the web.
-            always trying to learn something new.
+            computer science student exploring ml, ai, automation, and app development. always trying to learn something new.
           </p>
         </div>
         <ThemeToggle />
