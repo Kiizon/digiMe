@@ -55,7 +55,7 @@ export default function Home() {
       <header className="intro-header">
         <div className="intro-text">
           <h1 style={{ fontSize: "1.5rem", fontWeight: 500, marginBottom: "0.5rem" }}>
-            hi im kish
+            hi! my name is kish :D
           </h1>
           <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: "1.5" }}>
             computer science student exploring ml, ai, automation, and app development. always trying to learn something new.
