@@ -24,17 +24,23 @@ const RoleItem = ({
   logo?: string;
 }) => (
   <div className="item">
-    {logo ? (
-      <img src={logo} alt={title} className="role-icon" />
+    {href ? (
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        {logo ? (
+          <img src={logo} alt={title} className="role-icon hover:opacity-80 transition-opacity" />
+        ) : (
+          <div className="icon-placeholder hover:opacity-80 transition-opacity" />
+        )}
+      </a>
     ) : (
-      <div className="icon-placeholder" />
+      logo ? (
+        <img src={logo} alt={title} className="role-icon" />
+      ) : (
+        <div className="icon-placeholder" />
+      )
     )}
     <div className="item-content">
-      {href ? (
-        <a href={href} target="_blank" rel="noopener noreferrer" className="item-title">{title}</a>
-      ) : (
-        <span className="item-title">{title}</span>
-      )}
+      <span className="item-title">{title}</span>
       <span className="item-subtitle">{subtitle}</span>
     </div>
   </div>
@@ -77,6 +83,7 @@ export default function Home() {
           <RoleItem
             title="Software Developer Intern"
             subtitle="Morphace"
+            href="https://www.morphace.com/"
             logo="/morphace-logo.jpg"
           />
         </div>
