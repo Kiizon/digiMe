@@ -21,13 +21,13 @@ const PROJECTS: Project[] = [
     {
         title: "musubi",
         href: "https://github.com/Kiizon/musubi",
-        picture: "/assets/projects/Musubi-icon.png",
+        picture: "/assets/projects/musubi_demo.png",
         description: "A macOS native tool for managing your tasks."
     },
     {
         title: "cryptoRAG",
         href: "https://github.com/Kiizon/cryptoRAG",
-        picture: "/assets/projects/cryptoRAG.png",
+        picture: "/assets/projects/cryptography_RAG.png",
         description: "RAG system for cryptography basics."
     },
     {
@@ -39,7 +39,7 @@ const PROJECTS: Project[] = [
     {
         title: "Moba Analytics",
         href: "https://github.com/Kiizon/Moba-Analytics-Dashboard",
-        picture: "/assets/projects/MobaAnalyticsDashboard.png",
+        picture: "/assets/projects/moba_dbms_demo.png",
         description: "DBMS for MOBA game data."
     },
     {
@@ -69,7 +69,7 @@ const PROJECTS: Project[] = [
     {
         title: "chrome-dino",
         href: "https://github.com/Kiizon/chrome-dino",
-        picture: "",
+        picture: "/assets/projects/chrome_dino_replica_demo.png",
         description: "A faithful recreation of the classic Chrome Dino game."
     },
     {
@@ -126,7 +126,7 @@ export default function ProjectCarousel() {
                                                 <img
                                                     src={project.picture}
                                                     alt={project.title}
-                                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                                                 />
                                             ) : (
                                                 <div className="w-full h-full flex items-center justify-center min-h-[140px] md:min-h-[250px]">
