@@ -118,7 +118,7 @@ export default function ProjectCarousel() {
                                 rel="noopener noreferrer"
                                 className="block h-full"
                             >
-                                <Card className="h-[350px] border-border bg-card/50 backdrop-blur-sm overflow-hidden hover:bg-card/80 transition-colors duration-300">
+                                <Card className="h-[320px] border-border bg-card/50 backdrop-blur-sm overflow-hidden hover:bg-card/80 transition-colors duration-300">
                                     <CardContent className="p-0 flex flex-col md:flex-row h-full">
                                         {/* Image Section */}
                                         <div className="w-full h-1/2 md:w-2/3 md:h-full overflow-hidden bg-muted/20 relative group">
@@ -129,7 +129,7 @@ export default function ProjectCarousel() {
                                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                                 />
                                             ) : (
-                                                <div className="w-full h-full flex items-center justify-center min-h-[150px] md:min-h-[300px]">
+                                                <div className="w-full h-full flex items-center justify-center min-h-[140px] md:min-h-[250px]">
                                                     <span className="text-6xl">👾</span>
                                                 </div>
                                             )}

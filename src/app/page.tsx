@@ -65,7 +65,8 @@ export default function Home() {
       </header>
 
       {/* Currently */}
-      <div className="flex flex-col gap-6">
+      {/* Currently & Previously */}
+      <div className="flex flex-col gap-2">
         <Section title="Currently">
           <div className="item-list">
             <RoleItem
