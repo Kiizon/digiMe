@@ -155,8 +155,12 @@ export default function ProjectCarousel() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious onClickCapture={playSound} className="-left-12 h-12 w-12 border-muted-foreground/20 hover:border-foreground/50 hover:bg-transparent text-muted-foreground transition-all" />
-                <CarouselNext onClickCapture={playSound} className="-right-12 h-12 w-12 border-muted-foreground/20 hover:border-foreground/50 hover:bg-transparent text-muted-foreground transition-all" />
+                <CarouselPrevious onClickCapture={playSound} className="-left-12 h-12 w-12 border-muted-foreground/20 hover:border-foreground/50 hover:bg-transparent text-muted-foreground transition-all">
+                    <span className="text-xl">&lt;</span>
+                </CarouselPrevious>
+                <CarouselNext onClickCapture={playSound} className="-right-12 h-12 w-12 border-muted-foreground/20 hover:border-foreground/50 hover:bg-transparent text-muted-foreground transition-all">
+                    <span className="text-xl">&gt;</span>
+                </CarouselNext>
             </Carousel>
         </div>
     );
