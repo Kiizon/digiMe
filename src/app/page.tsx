@@ -1,5 +1,6 @@
 import ProjectCarousel from "@/components/ProjectCarousel";
 import ThemeToggle from "@/components/ThemeToggle";
+import SnowfallWrapper from "@/components/SnowfallWrapper";
 
 import React from "react";
 
@@ -52,6 +53,7 @@ export default function Home() {
     <main className="container">
       {/* Intro */}
       {/* Intro */}
+      <SnowfallWrapper />
       <header className="intro-header">
         <div className="intro-text">
           <h1 style={{ fontSize: "1.5rem", fontWeight: 500, marginBottom: "0.5rem" }}>

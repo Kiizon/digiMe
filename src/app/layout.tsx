@@ -9,7 +9,7 @@ const pixelFont = localFont({
 
 export const metadata: Metadata = {
   title: "kish dizon",
-  description: "developer.",
+  description: "developer and problem solver",
   icons: {
     icon: "/assets/icons/favicon.png",
   },
