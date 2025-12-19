@@ -65,28 +65,29 @@ export default function Home() {
       </header>
 
       {/* Currently */}
-      <Section title="Currently">
-        <div className="item-list">
-          <RoleItem
-            title="Computer Science"
-            subtitle="Toronto Metropolitan University"
-            href="https://www.torontomu.ca/"
-            logo="/tmu-logo.jpg"
-          />
-        </div>
-      </Section>
+      <div className="flex flex-col gap-6">
+        <Section title="Currently">
+          <div className="item-list">
+            <RoleItem
+              title="Computer Science"
+              subtitle="Toronto Metropolitan University"
+              href="https://www.torontomu.ca/"
+              logo="/tmu-logo.jpg"
+            />
+          </div>
+        </Section>
 
-      {/* Previously */}
-      <Section title="Previously">
-        <div className="item-list">
-          <RoleItem
-            title="Software Developer Intern"
-            subtitle="Morphace"
-            href="https://www.morphace.com/"
-            logo="/morphace-logo.jpg"
-          />
-        </div>
-      </Section>
+        <Section title="Previously">
+          <div className="item-list">
+            <RoleItem
+              title="Software Developer Intern"
+              subtitle="Morphace"
+              href="https://www.morphace.com/"
+              logo="/morphace-logo.jpg"
+            />
+          </div>
+        </Section>
+      </div>
 
       {/* Projects */}
       <Section title="Projects">
