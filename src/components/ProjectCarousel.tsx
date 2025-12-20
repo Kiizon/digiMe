@@ -90,13 +90,13 @@ export default function ProjectCarousel() {
     const audioRef = useRef<HTMLAudioElement | null>(null);
 
     useEffect(() => {
-        audioRef.current = new Audio("/assets/sfx/dropSfx.mp3");
+        audioRef.current = new Audio("/assets/sfx/dropSFX.mp3");
     }, []);
 
     const playSound = () => {
         if (audioRef.current) {
-            audioRef.current.currentTime = 0;
-            audioRef.current.play().catch((e) => console.error("Audio play failed", e));
+            const sound = audioRef.current.cloneNode(true) as HTMLAudioElement;
+            sound.play().catch((e) => console.error("Audio play failed", e));
         }
     };
 

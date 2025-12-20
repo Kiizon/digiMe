@@ -7,11 +7,14 @@ export default function ThemeToggle() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    audioRef.current = new Audio("/assets/sfx/dropSfx.mp3");
+    audioRef.current = new Audio("/assets/sfx/dropSFX.mp3");
   }, []);
 
   const toggleTheme = () => {
-    audioRef.current?.play();
+    if (audioRef.current) {
+      const sound = audioRef.current.cloneNode(true) as HTMLAudioElement;
+      sound.play().catch((e) => console.error("Audio play failed", e));
+    }
     setIsLight((prev) => !prev);
     document.documentElement.classList.toggle("light");
   };
