@@ -60,7 +60,7 @@ export default function Home() {
             hi! my name is kish :D
           </h1>
           <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: "1.5" }}>
-            computer science student exploring ml, ai, automation, and app development. driven by a growth mindset, i'm continuously learning, tinkering, and building things!          </p>
+            computer science student exploring ml, ai, automation, and app development. currently working on opsis - my own programming language! driven by a growth mindset, i'm continuously learning, tinkering, and building things!          </p>
         </div>
         <ThemeToggle />
       </header>
@@ -140,6 +140,6 @@ export default function Home() {
           </a>
         </div>
       </footer>
-    </main>
+    </main >
   );
 }
