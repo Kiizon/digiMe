@@ -91,6 +91,7 @@ export default function ProjectCarousel() {
 
     useEffect(() => {
         audioRef.current = new Audio("/assets/sfx/dropSFX.mp3");
+        audioRef.current.load();
     }, []);
 
     const playSound = () => {
