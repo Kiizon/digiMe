@@ -96,8 +96,8 @@ export default function ProjectCarousel() {
 
     const playSound = () => {
         if (audioRef.current) {
-            const sound = audioRef.current.cloneNode(true) as HTMLAudioElement;
-            sound.play().catch((e) => console.error("Audio play failed", e));
+            audioRef.current.currentTime = 0;
+            audioRef.current.play().catch((e) => console.error("Audio play failed", e));
         }
     };
 
