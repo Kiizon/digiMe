@@ -7,8 +7,10 @@ export default function ThemeToggle() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    audioRef.current = new Audio("/assets/sfx/dropSFX.mp3");
-    audioRef.current.load();
+    const audio = new Audio("/assets/sfx/dropSFX.mp3");
+    audio.crossOrigin = "anonymous";
+    audio.load();
+    audioRef.current = audio;
   }, []);
 
   const toggleTheme = () => {
