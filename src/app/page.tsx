@@ -1,4 +1,4 @@
-import ProjectCarousel from "@/components/ProjectCarousel";
+import ProjectSection from "@/components/ProjectSection";
 import ThemeToggle from "@/components/ThemeToggle";
 import SnowfallWrapper from "@/components/SnowfallWrapper";
 
@@ -93,7 +93,7 @@ export default function Home() {
 
       {/* Projects */}
       <Section title="Projects">
-        <ProjectCarousel />
+        <ProjectSection />
       </Section>
 
       {/* Footer */}
