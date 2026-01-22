@@ -9,6 +9,10 @@ type Project = {
 
 const PROJECTS: Project[] = [
     {
+        title: "html.ai",
+        href: "https://htmlai.tech/",
+    },
+    {
         title: "musubi",
         href: "https://github.com/Kiizon/musubi",
     },
@@ -71,4 +75,5 @@ export default function ProjectSection() {
         </div>
     );
 }
+
 

@@ -1,36 +1,5 @@
 import ProjectSection from "@/components/ProjectSection";
-import ThemeToggle from "@/components/ThemeToggle";
-import SnowfallWrapper from "@/components/SnowfallWrapper";
-
-import React from "react";
-
-// Components for the clean layout
-const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
-  <div className="section">
-    <h3 className="section-title">{title}</h3>
-    {children}
-  </div>
-);
-
-const RoleItem = ({
-  title,
-  subtitle,
-  href,
-  logo
-}: {
-  title: string;
-  subtitle: string;
-  href?: string;
-  logo?: string;
-}) => (
-  <div className="item">
-    {href ? (
-      <a href={href} target="_blank" rel="noopener noreferrer">
-        {logo ? (
-          <img src={logo} alt={title} className="role-icon hover:opacity-80 transition-opacity" />
-        ) : (
-          <div className="icon-placeholder hover:opacity-80 transition-opacity" />
-        )}
+import ThemeToggle fbvbvvbv      v  ```
       </a>
     ) : (
       logo ? (
