@@ -1,5 +1,36 @@
 import ProjectSection from "@/components/ProjectSection";
-import ThemeToggle fbvbvvbv      v  ```
+import ThemeToggle from "@/components/ThemeToggle";
+import SnowfallWrapper from "@/components/SnowfallWrapper";
+
+import React from "react";
+
+// Components for the clean layout
+const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
+  <div className="section">
+    <h3 className="section-title">{title}</h3>
+    {children}
+  </div>
+);
+
+const RoleItem = ({
+  title,
+  subtitle,
+  href,
+  logo
+}: {
+  title: string;
+  subtitle: string;
+  href?: string;
+  logo?: string;
+}) => (
+  <div className="item">
+    {href ? (
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        {logo ? (
+          <img src={logo} alt={title} className="role-icon hover:opacity-80 transition-opacity" />
+        ) : (
+          <div className="icon-placeholder hover:opacity-80 transition-opacity" />
+        )}
       </a>
     ) : (
       logo ? (
@@ -15,12 +46,9 @@ import ThemeToggle fbvbvvbv      v  ```
   </div>
 );
 
-
-
 export default function Home() {
   return (
     <main className="container">
-      {/* Intro */}
       {/* Intro */}
       <SnowfallWrapper />
       <header className="intro-header">
@@ -29,12 +57,12 @@ export default function Home() {
             hi! my name is kish :D
           </h1>
           <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: "1.5" }}>
-            computer science student exploring ml, ai, automation, and app development. currently working on opsis - my own programming language! driven by a growth mindset, i'm continuously learning, tinkering, and building things!          </p>
+            computer science student exploring ml, ai, automation, and app development. currently working on opsis - my own programming language! driven by a growth mindset, i'm continuously learning, tinkering, and building things!
+          </p>
         </div>
         <ThemeToggle />
       </header>
 
-      {/* Currently */}
       {/* Currently & Previously */}
       <div className="flex flex-col gap-2">
         <Section title="Currently">
@@ -109,6 +137,6 @@ export default function Home() {
           </a>
         </div>
       </footer>
-    </main >
+    </main>
   );
 }
