@@ -88,6 +88,19 @@ export default function Home() {
         </Section>
       </div>
 
+      {/* Recent */}
+      <Section title="Recent">
+        <div className="item-list">
+          <a href="/ibm-z-ambassador" className="item hover:opacity-80 transition-opacity">
+            <img src="/ibmZpic.png" alt="IBM Z Ambassador" className="role-icon" style={{ borderRadius: "4px" }} />
+            <div className="item-content">
+              <span className="item-title">Becoming an IBM Z Student Ambassador</span>
+              <span className="item-subtitle">2025-26 Academic Year</span>
+            </div>
+          </a>
+        </div>
+      </Section>
+
       {/* Projects */}
       <Section title="Projects">
         <ProjectSection />
