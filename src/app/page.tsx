@@ -57,7 +57,7 @@ export default function Home() {
             hi! my name is kish :D
           </h1>
           <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: "1.5" }}>
-            computer science student exploring ml, ai, automation, and app development. currently focusing on learning new skills, honing current skills, and finding an internship. driven by a growth mindset, i'm continuously learning, tinkering, and building things!
+            computer science student exploring ml, ai, automation, and app development. currently focusing on learning new skills, honing current skills, and building impactful projects. driven by a growth mindset, i'm continuously learning, tinkering, and building things!
           </p>
         </div>
         <ThemeToggle />
@@ -67,6 +67,12 @@ export default function Home() {
       <div className="flex flex-col gap-2">
         <Section title="Currently">
           <div className="item-list">
+            <RoleItem
+              title="Mobile Developer Intern"
+              subtitle="Noble Solutions Group"
+              href="https://noblesolutionsgrp.com/"
+              logo="/noble-logo.png"
+            />
             <RoleItem
               title="Computer Science"
               subtitle="Toronto Metropolitan University"
