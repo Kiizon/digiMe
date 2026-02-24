@@ -70,7 +70,7 @@ export default function Home() {
             <RoleItem
               title="Mobile Developer Intern"
               subtitle="Noble Solutions Group"
-              href="https://noblesolutionsgrp.com/"
+              href="https://advanceontario.riipen.com/companies/jzm0KgOm"
               logo="/noble-logo.png"
             />
             <RoleItem
