@@ -1,4 +1,3 @@
-import ProjectSection from "@/components/ProjectSection";
 import ThemeToggle from "@/components/ThemeToggle";
 import Link from "next/link";
 import React from "react";
@@ -68,11 +67,6 @@ export default function Home() {
 
         <Section title="currently">
           <Row
-            title="Mobile Developer Intern"
-            subtitle="Noble Solutions Group"
-            href="https://advanceontario.riipen.com/companies/jzm0KgOm"
-          />
-          <Row
             title="Computer Science"
             subtitle="Toronto Metropolitan University"
             href="https://www.torontomu.ca/"
@@ -80,6 +74,11 @@ export default function Home() {
         </Section>
 
         <Section title="previously">
+          <Row
+            title="Mobile Developer Intern"
+            subtitle="Noble Solutions Group"
+            href="https://advanceontario.riipen.com/companies/jzm0KgOm"
+          />
           <Row
             title="Software Developer Intern"
             subtitle="Morphace"
@@ -97,7 +96,26 @@ export default function Home() {
         </Section>
 
         <Section title="projects">
-          <ProjectSection />
+          <Row
+            title="musubi"
+            subtitle="macOS menu bar timer with task tracking"
+            href="https://github.com/Kiizon/musubi"
+          />
+          <Row
+            title="cryptoRAG"
+            subtitle="RAG chatbot for cryptography education"
+            href="https://github.com/Kiizon/cryptoRAG"
+          />
+          <Row
+            title="everything else"
+            subtitle="github.com/Kiizon"
+            href="https://github.com/Kiizon?tab=repositories"
+          />
+          <Row
+            title="open source contributions"
+            subtitle="pull requests on github"
+            href="https://github.com/search?q=author%3AKiizon+type%3Apr+-user%3AKiizon&type=pullrequests"
+          />
         </Section>
       </main>
 
