@@ -60,14 +60,14 @@ const PROJECTS: Project[] = [
 
 export default function ProjectSection() {
     return (
-        <div className="flex flex-wrap gap-x-4 gap-y-2">
-            {PROJECTS.map((project, index) => (
+        <div className="projects">
+            {PROJECTS.map((project) => (
                 <a
-                    key={index}
+                    key={project.title}
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 hover:underline"
+                    className="project"
                 >
                     {project.title}
                 </a>
@@ -75,5 +75,3 @@ export default function ProjectSection() {
         </div>
     );
 }
-
-

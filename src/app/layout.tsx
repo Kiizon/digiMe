@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Jellyfish from "@/components/Jellyfish";
 import "./globals.css";
 
 const pixelFont = localFont({
@@ -23,7 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={pixelFont.variable}>
       <body>
-        {children}
+        <div className="stage">
+          <div className="frame">{children}</div>
+          <Jellyfish />
+        </div>
       </body>
     </html>
   );
