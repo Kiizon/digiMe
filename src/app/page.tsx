@@ -98,7 +98,7 @@ export default function Home() {
         <Section title="projects">
           <Row
             title="musubi"
-            subtitle="macOS menu bar timer with task tracking"
+            subtitle="macOS productivity menu bar app"
             href="https://github.com/Kiizon/musubi"
           />
           <Row
