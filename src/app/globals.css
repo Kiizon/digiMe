@@ -229,6 +229,19 @@ a.bar-id:hover {
   line-height: 1.6;
 }
 
+.bio + .bio {
+  margin-top: 0.5rem;
+}
+
+.bio a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.bio a:hover {
+  color: var(--accent);
+}
+
 .avatar {
   flex: none;
   width: 52px;

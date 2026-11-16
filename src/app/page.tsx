@@ -61,6 +61,25 @@ export default function Home() {
               computer science student learning how to build systems that scale. into backend,
               infrastructure, and ml, and always tinkering with something on the side.
             </p>
+            <p className="bio">
+              i like contributing to open source. current contributions are to{" "}
+              <a
+                href="https://github.com/excalidraw/excalidraw/pull/10588"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                excalidraw
+              </a>
+              , a whiteboarding tool, and{" "}
+              <a
+                href="https://github.com/rxhanson/Rectangle/pull/1913"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                rectangle
+              </a>
+              , a macOS window manager.
+            </p>
           </div>
           <ThemeToggle />
         </div>
