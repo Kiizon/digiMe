@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function ThemeToggle() {
-  const [isLight, setIsLight] = useState(false);
+  const [isDark, setIsDark] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
@@ -18,8 +18,8 @@ export default function ThemeToggle() {
       audioRef.current.currentTime = 0;
       audioRef.current.play().catch((e) => console.error("Audio play failed", e));
     }
-    setIsLight((prev) => !prev);
-    document.documentElement.classList.toggle("light");
+    setIsDark((prev) => !prev);
+    document.documentElement.classList.toggle("dark");
   };
 
   return (
@@ -27,7 +27,7 @@ export default function ThemeToggle() {
       type="button"
       className="avatar"
       onClick={toggleTheme}
-      aria-label={isLight ? "Switch to dark theme" : "Switch to light theme"}
+      aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
       title="toggle theme"
     >
       <img src="/me-logo.png" alt="Kish Dizon" />
