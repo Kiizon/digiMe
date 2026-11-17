@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import Jellyfish from "@/components/Jellyfish";
 import "./globals.css";
-
-const pixelFont = localFont({
-  src: "./fonts/BlockCraft.otf",
-  variable: "--font-pixel",
-});
 
 export const metadata: Metadata = {
   title: "kish dizon",
@@ -22,12 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={pixelFont.variable}>
+    <html lang="en">
       <body>
-        <div className="stage">
-          <div className="frame">{children}</div>
-          <Jellyfish />
-        </div>
+        <div className="page">{children}</div>
       </body>
     </html>
   );
